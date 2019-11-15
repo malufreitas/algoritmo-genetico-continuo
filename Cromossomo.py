@@ -8,6 +8,10 @@ class Cromossomo:
     def get_aptidao(self):
         return self.aptidao
 
+    def set_valorcontinuo(self,gene):
+        self.valor_continuo = gene
+        self.aptidao = self.calcula_aptidao(self.valor_continuo)
+
     def get_valorcontinuo(self):
         return self.valor_continuo
 

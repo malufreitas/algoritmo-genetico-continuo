@@ -20,23 +20,40 @@ import random
 import copy
 
 def mutacao(filho):
-    # TODO
+    taxaMutacao = random.uniform(0, 1)
+    if(taxaMutacao <= 0.05):
+        gene = random.uniform(0, 1)
+        if gene < 0.5:
+            filho.set_valorcontinuo(-20)
+        else:
+            filho.set_valorcontinuo(20)
     return filho
 
 def crossover(cromossomoA, cromossomoB):
     #  Operador BLX-alpha
-
     pai1 = cromossomoA.get_valorcontinuo()
     pai2 = cromossomoB.get_valorcontinuo()
     alpha = 0.5
     beta = random.uniform(alpha,1+alpha)
 
     f1 = pai1 + beta*(pai2-pai1)
+    if (f1 < -20):
+        f1 = -20
+    elif (f1 > 20):
+        f1 = 20
+    else:
+        f1 = f1
     filho1 = Cromossomo(f1)
 
     f2 = pai1 + beta*(pai2-pai1)
+    if (f2 < -20):
+        f2 = -20
+    elif (f2 > 20):
+        f2 = 20
+    else:
+        f2 = f2
     filho2 = Cromossomo(f2)
-
+    
     return filho1, filho2
 
 def gera_populacao_inicial(numero_populacao):
@@ -83,7 +100,7 @@ def algoritmo_genetico(numero_populacao, geracoes):
 
             # Crossover
             taxaCrossover = random.uniform(0, 1)
-            if(taxaCrossover <= 0.8):
+            if(taxaCrossover <= 0.6):
                 filho1, filho2 = crossover(cromossomoA, cromossomoB)
             else:
                 filho1, filho2 = cromossomoA, cromossomoB
