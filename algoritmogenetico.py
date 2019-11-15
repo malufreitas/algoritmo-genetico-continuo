@@ -28,13 +28,13 @@ def crossover(cromossomoA, cromossomoB):
 
     pai1 = cromossomoA.get_valorcontinuo()
     pai2 = cromossomoB.get_valorcontinuo()
-    alpha = 0
+    alpha = 0.5
     beta = random.uniform(alpha,1+alpha)
 
     f1 = pai1 + beta*(pai2-pai1)
     filho1 = Cromossomo(f1)
 
-    f2 = pai2 + beta*(pai1-pai2)
+    f2 = pai1 + beta*(pai2-pai1)
     filho2 = Cromossomo(f2)
 
     return filho1, filho2
