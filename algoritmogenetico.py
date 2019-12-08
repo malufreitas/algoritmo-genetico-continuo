@@ -100,7 +100,7 @@ def algoritmo_genetico(numero_populacao, geracoes):
 
             # Crossover
             taxaCrossover = random.uniform(0, 1)
-            if(taxaCrossover <= 0.6):
+            if(taxaCrossover <= 0.8):
                 filho1, filho2 = crossover(cromossomoA, cromossomoB)
             else:
                 filho1, filho2 = cromossomoA, cromossomoB
