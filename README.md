@@ -17,7 +17,7 @@ Os algoritmos genéticos possuem algumas características como por exemplo não 
 O desafio proposto pelo professor é utilizar a implementação de algum algortmo genético para minimizar a função descrita abaixo:
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-continuo/blob/master/images/funcao.png?raw=true">
+  <img  src="https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/images/funcao.png?raw=true">
 </p>
 
 **Restrições**
@@ -73,45 +73,56 @@ A estrutura da implementação tomou como base não somente o pseudocódigo pass
 **Populacao Inicial**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-continuo/blob/master/images/populacao_inicial.png?raw=true">
+  <img  src="https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/images/populacao_inicial.png?raw=true">
 </p>
 
 **Selecao por Torneio**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-continuo/blob/master/images/selecao_torneio.png?raw=true">
+  <img  src="https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/images/selecao_torneio.png?raw=true">
 </p>
 
 
 **Cross Over**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-continuo/blob/master/images/crossover.png?raw=true">
+  <img  src="https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/images/crossover.png?raw=true">
 </p>
 
 **Mutação**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-continuo/blob/master/images/mutacao.png?raw=true">
+  <img  src="https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/images/mutacao.png?raw=true">
 </p>
 
 **Remove pior filho e Mantem melhor pai**
 
 <p align="center">
-  <img  src="https://github.com/malufreitas/algoritmo-genetico-continuo/blob/master/images/remove_piorfilho_mantem_melhorpai.png?raw=true">
+  <img  src="https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/images/remove_piorfilho_mantem_melhorpai.png?raw=true">
 </p>
 
 ## Comparativo com AG Binário
 
+>**Figura 1**
+![alt-text-1](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-binario/master/testes/Teste-10iteracoes-10populacao-20geracao.PNG "title-1")
+
+>**Figura 2**
+![alt-text-2](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-10populacao-20geracao.png "title-2")
+
+Os resultados comparativos mostram que a implementação do Algoritmo Genético com representação contínuo atingiram uma melhor solução para a minimização da função proposta acima. No geral, todas as ocorrências para o melhor resultado no AG Continuo trouxeram melhores resultados dos que os melhores resultados no AG Binário.
+
+A título de comparação, a Figura 1 acima trás os dados de execução para o AG Binário na iteração de 10 processamentos no qual foram parametrizados 10 individuos com 20 gerações no total. Já a figura 2 representa os mesmo critérios de execução, entretando para a implementação de AG contínuo. Segundo o gráfico é possível visualizar (confirmado na legenda), que para o cenário, o AG contínuo chega muito próximo ao mínimo para o domínio restringido na solução do problema: *-16,789*.
 
 ## Resultados
 
-Os arquivos a seguir mostram os resultados  (média e melhor) de em cada iteração, processados em uma pilha de 10 testes para os casos de:
+Os demais gráficos a seguir mostram os resultados  (média e melhor) de em cada iteração, processados em uma pilha de 10 testes para os casos de:
 
-- [10 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-10populacao-10geracao.csv?raw=true)
-- [10 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-20populacao-10geracao.csv?raw=true)
-- [20 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-10populacao-20geracao.csv?raw=true)
-- [20 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-20populacao-20geracao.csv?raw=true)
+- [10 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-10populacao-10geracao.png?raw=true)
+- [10 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-20populacao-10geracao.png?raw=true)
+- [20 Gerações e 10 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-10populacao-20geracao.png?raw=true)
+- [20 Gerações e 20 Indivíduos](https://raw.githubusercontent.com/malufreitas/algoritmo-genetico-continuo/master/execucoes/exec-10iteracoes-20populacao-20geracao.png?raw=true)
+
+Conclui-se portanto que, para o caso de teste exposto e colocado como objeto de estudo deste trabalho, as implementações para o AG contínuo se mostraram mais eficientes, se comparados ao AG binário,
 
 ### Referências
 
